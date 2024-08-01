@@ -143,6 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         Array.from(files).forEach((file) => {
+            console.log(`Imagem adicionada: ${file.name}`);
             const attachmentItem = document.createElement('div');
             attachmentItem.classList.add('attachment-item');
             attachmentItem.innerHTML = `
@@ -153,6 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // excluir anexo
             attachmentItem.querySelector('.trash').addEventListener('click', () => {
+                console.log(`Imagem excluída: ${file.name}`);
                 attachmentItem.remove();
                 filesList = filesList.filter(f => f !== file);
                 if (attachmentsSection.children.length === 0) {
