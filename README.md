@@ -9,6 +9,7 @@ Este projeto é uma aplicação para gerenciar informações de fornecedores e p
 - HTML5
 - CSS3
 - JavaScript
+- API Via Cep
 
 
 ## Funcionalidades
