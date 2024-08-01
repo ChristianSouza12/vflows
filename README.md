@@ -29,6 +29,10 @@ Este projeto é uma aplicação para gerenciar informações de fornecedores e p
 5. Um modal de sucesso será exibido se todos os campos estiverem corretos e pelo menos um arquivo estiver anexado.
 6. Será gerado json no console com as informações preenchidas.
 
+
+## Link Deploy:
+https://vflows-inky.vercel.app/
+
 ## Imagens do projeto
 
 ## Cadastro
