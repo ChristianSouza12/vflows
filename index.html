@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <script src="./scripts.js" defer></script>
+  <title>Cadastro Fornecedor/Produto</title>
+</head>
+<body>
+
+<div class="container">
+  <h1>CADASTRO FORNECEDOR/PRODUTO</h1>
+  
+  <!-- Dados do Fornecedor -->
+  <div class="section">
+    <h2>Dados do Fornecedor</h2>
+    <div class="grid">
+      <div class="field">
+        <label for="razao-social">Razão Social</label>
+        <input required type="text" id="razao-social" class="input-field" />
+      </div>
+      <div class="field">
+        <label for="cnpj">CNPJ</label>
+        <input required type="text" id="cnpj" class="input-field" />
+      </div>
+      <div class="field">
+        <label for="nome-fantasia">Nome Fantasia</label>
+        <input required type="text" id="nome-fantasia" class="input-field" />
+      </div>
+      <div class="field">
+        <label for="inscricao-estadual">Inscrição Estadual</label>
+        <input type="text" id="inscricao-estadual" class="input-field" />
+      </div>
+      <div class="field">
+        <label for="cep">CEP</label>
+        <input required type="text" id="cep" class="input-field" />
+      </div>
+      <div class="field">
+        <label for="inscricao-municipal">Inscrição Municipal</label>
+        <input type="text" id="inscricao-municipal" class="input-field" />
+      </div>
+      <div class="field">
+        <label for="endereco">Endereço</label>
+        <input required type="text" id="endereco" class="input-field" />
+      </div>
+      <div class="field">
+        <label for="numero">Número</label>
+        <input required type="text" id="numero" class="input-field" />
+      </div>
+      <div class="field">
+        <label for="complemento">Complemento</label>
+        <input type="text" id="complemento" class="input-field" />
+      </div>
+      <div class="field">
+        <label for="bairro">Bairro</label>
+        <input required type="text" id="bairro" class="input-field" />
+      </div>
+      <div class="field">
+        <label for="municipio">Município</label>
+        <input required type="text" id="municipio" class="input-field" />
+      </div>
+      <div class="field">
+        <label for="estado">Estado</label>
+        <input required type="text" id="estado" class="input-field" />
+      </div>
+      <div class="field">
+        <label for="contato">Nome da Pessoa de Contato</label>
+        <input required type="text" id="contato" class="input-field" />
+      </div>
+      <div class="field">
+        <label for="telefone">Telefone</label>
+        <input required type="text" id="telefone" class="input-field" />
+      </div>
+      <div class="field">
+        <label for="email">E-mail</label>
+        <input required type="email" id="email" class="input-field" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Produtos -->
+  <div class="section" id="products-section">
+    <h2>Produtos</h2>
+    
+    <div id="product-1" class="product">
+      <h3>Novo Produto</h3>
+      <div class="product-container">
+        <div class="product-grid">
+          <img src="./assets/box-svgrepo-com.svg" alt="box-logo" class="input-image" />
+          <div class="product-inputs">
+            <input type="text" placeholder="Produto" required class="input-field product-name" />
+            <div class="additional-fields">
+              <select class="input-field" required>
+                <option value="" disabled selected>UND. Medida</option>
+                <option>M = Metro</option>
+                <option>CM = Centímetro</option>
+                <option>MM = Milímetro</option>
+                <option>DM = Decímetro</option>
+                <option>DAM = Decâmetro</option>
+                
+              </select>
+              <input type="number" required placeholder="QTD. em Estoque" class="input-field quantity" />
+              <input type="number" required placeholder="Valor Unitário" class="input-field unit-value" />
+              <input placeholder="Valor Total" class="input-field total-value" readonly />
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="delete">
+        <img src="./assets/trash-alt-svgrepo-com.svg" alt="Delete" />
+      </button>
+    </div>
+  </div>
+  <button id="add-product" class="button secondary">Adicionar Produto</button>
+
+  <!-- Anexos -->
+  <div class="section" id="attachments-section">
+    <h2>Anexos</h2>
+    <h3>Faça o upload de pelo menos UM arquivo.</h3>
+    <input type="file" id="file-upload" accept=".png, .pdf" class="file-upload" multiple />
+    <div class="attachments">
+      
+      
+    </div>
+    <button id="add-attachment" class="button secondary">Incluir Anexo</button>
+  </div>
+  <button id="save" class="button primary">Salvar Fornecedor</button>
+</div>
+<!-- Modal-->
+<div id="success-modal" class="modal">
+    <div class="modal-content">
+        <span id="close-modal" class="close">&times;</span>
+        <p>Fornecedor salvo com sucesso!</p>
+    </div>
+</div>
+ 
+</body>
+</html>
